@@ -1,13 +1,48 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.examen.restaurant.persistence.DTO;
 
-/**
- *
- * @author camper
- */
+import java.util.Date;
+import java.util.List;
+
 public class PedidoDTO {
-    
+
+    private Long idpedido;
+    private String estado;
+    private Date fechaPedido;
+    private List<DetallesPedidoDTO> listaDetallesPedidoDTO;
+
+    public PedidoDTO() {
+    }
+
+    public Long getIdpedido() {
+        return idpedido;
+    }
+
+    public void setIdpedido(Long idpedido) {
+        this.idpedido = idpedido;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Date getFechaPedido() {
+        return fechaPedido;
+    }
+
+    public void setFechaPedido(Date fechaPedido) {
+        this.fechaPedido = fechaPedido;
+    }
+
+    public List<DetallesPedidoDTO> getListaDetallesPedidoDTO() {
+        return listaDetallesPedidoDTO;
+    }
+
+    public void setListaDetallesPedidoDTO(List<DetallesPedidoDTO> listaDetallesPedidoDTO) {
+        this.listaDetallesPedidoDTO = listaDetallesPedidoDTO;
+    }
+
 }

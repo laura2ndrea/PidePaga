@@ -1,5 +1,6 @@
 package com.examen.restaurant.persistence.entity;
 
+import com.examen.restaurant.persistence.DTO.PedidoDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -65,5 +66,25 @@ public class Producto {
     public void setPrecio(Double precio) {
         this.precio = precio;
     }
+    
+
+    
+    
+    
+    
+    
+    
+//    
+//      public CreateUserDTO toDTOCreate() {
+//        CreateUserDTO createUserDTO = new CreateUserDTO();
+//        createUserDTO.setName(this.name);
+//        createUserDTO.setEmail(this.email);
+//        createUserDTO.setPassword(this.password);
+//        createUserDTO.setUserName(this.userName);
+//        return createUserDTO;
+//
+//    }
+//    
+    
     
 }

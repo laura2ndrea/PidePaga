@@ -118,17 +118,7 @@ public class Cliente {
     }
 
     
-//    public void addPedido(Pedido pedido) {
-//        this.listaPedidos.add(pedido);
-//        setFollower(this);
-//    }
-//
-//    public void removeFollower(Follow follow) {
-//        this.followerList.remove(follow);
-//        follow.setFollower(null);
-//    }
-//    
-    
+  
     
     
     
