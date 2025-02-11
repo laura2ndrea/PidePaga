@@ -139,19 +139,6 @@ public class Administrador {
         administradorDTO.setEstado(this.estado);
         return administradorDTO;
     }
-
-    public static Administrador fromDTO(AdministradorDTO administradorDTO) {
-        Administrador administrador = new Administrador();
-        administrador.setIdAdministrador(administradorDTO.getIdAdministrador());
-        administrador.setName(administradorDTO.getName());
-        administrador.setCedula(administradorDTO.getCedula());
-        administrador.setUserName(administradorDTO.getUserName());
-        administrador.setPassword(administradorDTO.getPassword());
-        administrador.setEmail(administradorDTO.getEmail());
-        administrador.setEstado(administradorDTO.getEstado());
-        return administrador;
-    }
-
     
     // DTO para mostrar el admionistrador 
     

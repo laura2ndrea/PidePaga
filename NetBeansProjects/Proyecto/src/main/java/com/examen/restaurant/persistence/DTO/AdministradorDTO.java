@@ -1,6 +1,8 @@
 
 package com.examen.restaurant.persistence.DTO;
 
+import com.examen.restaurant.persistence.entity.Administrador;
+
 
 public class AdministradorDTO {
     
@@ -78,11 +80,17 @@ public class AdministradorDTO {
         this.estado = estado;
     }
 
-    
-    
-
-    
-    
-    
+    public Administrador fromDTO() {
+        Administrador administrador = new Administrador();
+        administrador.setIdAdministrador(this.idAdministrador);
+        administrador.setName(this.name);
+        administrador.setCedula(this.cedula);
+        administrador.setUserName(this.userName);
+        administrador.setPassword(this.password);
+        administrador.setEmail(this.email);
+        administrador.setEstado(this.estado);
+        return administrador;
+    }
     
 }
+
