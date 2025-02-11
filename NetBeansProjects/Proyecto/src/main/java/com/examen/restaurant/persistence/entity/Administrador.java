@@ -25,19 +25,105 @@ public class Administrador {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false , unique = true)
     private String cedula;
 
-    @Column(nullable = false)
+     @Column(nullable = false , unique = true)
     private String userName;
 
-    @Column(nullable = false)
+     @Column(nullable = false , unique = true)
     private String email;
 
     @Column(nullable = false)
     private String password;
+    
+    
+    
+    private  Boolean estado; 
 
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "administrador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Pedido> listaPedidos = new ArrayList<>();
 
+    public Administrador() {
+    }
+
+    public Administrador(String name, String cedula, String userName, String email, String password, Boolean estado) {
+        this.name = name;
+        this.cedula = cedula;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+        this.estado = estado;
+    }
+
+    public Long getIdAdministrador() {
+        return idAdministrador;
+    }
+
+    public void setIdAdministrador(Long idAdministrador) {
+        this.idAdministrador = idAdministrador;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Boolean getEstado() {
+        return estado;
+    }
+
+    public void setEstado(Boolean estado) {
+        this.estado = estado;
+    }
+
+    public List<Pedido> getListaPedidos() {
+        return listaPedidos;
+    }
+
+    public void setListaPedidos(List<Pedido> listaPedidos) {
+        this.listaPedidos = listaPedidos;
+    }
+
+    
+    
+    
+    
+    
+    
 }

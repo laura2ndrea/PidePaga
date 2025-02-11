@@ -23,19 +23,22 @@ public class Cliente {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false , unique = true)
     private String cedula;
 
-    @Column(nullable = false)
+    @Column(nullable = false , unique = true)
     private String userName;
 
-    @Column(nullable = false)
+     @Column(nullable = false , unique = true)
     private String email;
 
     @Column(nullable = false)
     private String password;
+    
+    
+    private  Boolean estado; 
 
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Pedido> listaPedidos = new ArrayList<>();
 
     public Cliente() {
