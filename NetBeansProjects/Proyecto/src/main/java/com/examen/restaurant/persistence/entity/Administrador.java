@@ -1,5 +1,7 @@
 package com.examen.restaurant.persistence.entity;
 
+import com.examen.restaurant.persistence.DTO.AdministradorDTO;
+import com.examen.restaurant.persistence.DTO.ShowAdministradorDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -41,6 +43,9 @@ public class Administrador {
     
     private  Boolean estado; 
 
+    
+    
+    
     @OneToMany(mappedBy = "administrador", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Pedido> listaPedidos = new ArrayList<>();
 
@@ -121,7 +126,57 @@ public class Administrador {
     }
 
     
+    // DTO Administrador para mostrar 
     
+    public AdministradorDTO toDTO() {
+        AdministradorDTO administradorDTO = new AdministradorDTO();
+        administradorDTO.setIdAdministrador(this.idAdministrador);
+        administradorDTO.setName(this.name);
+        administradorDTO.setCedula(this.cedula);
+        administradorDTO.setUserName(this.userName);
+        administradorDTO.setPassword(this.password);
+        administradorDTO.setEmail(this.email);
+        administradorDTO.setEstado(this.estado);
+        return administradorDTO;
+    }
+
+    public static Administrador fromDTO(AdministradorDTO administradorDTO) {
+        Administrador administrador = new Administrador();
+        administrador.setIdAdministrador(administradorDTO.getIdAdministrador());
+        administrador.setName(administradorDTO.getName());
+        administrador.setCedula(administradorDTO.getCedula());
+        administrador.setUserName(administradorDTO.getUserName());
+        administrador.setPassword(administradorDTO.getPassword());
+        administrador.setEmail(administradorDTO.getEmail());
+        administrador.setEstado(administradorDTO.getEstado());
+        return administrador;
+    }
+
+    
+    // DTO para mostrar el admionistrador 
+    
+    
+    public ShowAdministradorDTO toShowDTO() {
+        ShowAdministradorDTO showAdministradorDTO = new ShowAdministradorDTO();
+        showAdministradorDTO.setIdAdministrador(this.idAdministrador);
+        showAdministradorDTO.setName(this.name);
+        showAdministradorDTO.setUserName(this.userName);
+        showAdministradorDTO.setEmail(this.email);
+        showAdministradorDTO.setEstado(this.estado);
+        return showAdministradorDTO;
+    }
+
+    public static Administrador fromShowDTO(ShowAdministradorDTO showAdministradorDTO) {
+        Administrador administrador = new Administrador();
+        administrador.setIdAdministrador(showAdministradorDTO.getIdAdministrador());
+        administrador.setName(showAdministradorDTO.getName());
+        administrador.setUserName(showAdministradorDTO.getUserName());
+        administrador.setEmail(showAdministradorDTO.getEmail());
+        administrador.setEstado(showAdministradorDTO.getEstado());
+        return administrador;
+        
+        
+    }
     
     
     

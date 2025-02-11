@@ -1,22 +1,19 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.examen.restaurant.persistence.DTO;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
-
-public class ClienteDTO {
+public class ShowClienteDTO {
+    
+    
     
 
-    private Long idCleinte;
+    private Long idCliente;
 
 
     private String name;
-
-
-    private String cedula;
 
     
     private String userName;
@@ -24,24 +21,22 @@ public class ClienteDTO {
 
     private String email;
 
-  
-    private String password;
-    
     
     private  Boolean estado; 
 
-    public ClienteDTO() {
+    public ShowClienteDTO() {
     }
 
-    public Long getIdCleinte() {
-        return idCleinte;
+   
+
+
+    public Long getIdCliente() {
+        return idCliente;
     }
 
-    public void setIdCleinte(Long idCleinte) {
-        this.idCleinte = idCleinte;
+    public void setIdCliente(Long idCliente) {
+        this.idCliente = idCliente;
     }
-
-  
 
     public String getName() {
         return name;
@@ -49,14 +44,6 @@ public class ClienteDTO {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
     }
 
     public String getUserName() {
@@ -75,14 +62,6 @@ public class ClienteDTO {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public Boolean getEstado() {
         return estado;
     }
@@ -91,9 +70,6 @@ public class ClienteDTO {
         this.estado = estado;
     }
 
-    
-    
-    
     
     
 }

@@ -1,6 +1,7 @@
 package com.examen.restaurant.persistence.entity;
 
 import com.examen.restaurant.persistence.DTO.PedidoDTO;
+import com.examen.restaurant.persistence.DTO.ProductoDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -47,6 +48,22 @@ public class Producto {
         return idProducto;
     }
 
+    public Boolean getDisponibilidad() {
+        return disponibilidad;
+    }
+
+    public void setDisponibilidad(Boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
+
+    public List<DetallesPedido> getListaDetallesPedido() {
+        return listaDetallesPedido;
+    }
+
+    public void setListaDetallesPedido(List<DetallesPedido> listaDetallesPedido) {
+        this.listaDetallesPedido = listaDetallesPedido;
+    }
+
     public void setIdProducto(Long idProducto) {
         this.idProducto = idProducto;
     }
@@ -68,23 +85,28 @@ public class Producto {
     }
     
 
+     public ProductoDTO toDTO() {
+        ProductoDTO productoDTO = new ProductoDTO();
+        productoDTO.setIdProducto(this.idProducto);
+        productoDTO.setNombre(this.nombre);
+        productoDTO.setDisponibilidad(this.disponibilidad);
+        productoDTO.setPrecio(this.precio);
+        return productoDTO;
+    }
+
+    public static Producto fromDTO(ProductoDTO productoDTO) {
+        Producto producto = new Producto();
+        producto.setIdProducto(productoDTO.getIdProducto());
+        producto.setNombre(productoDTO.getNombre());
+        producto.setDisponibilidad(productoDTO.getDisponibilidad());
+        producto.setPrecio(productoDTO.getPrecio());
+        return producto;
+    }
     
     
     
     
     
-    
-//    
-//      public CreateUserDTO toDTOCreate() {
-//        CreateUserDTO createUserDTO = new CreateUserDTO();
-//        createUserDTO.setName(this.name);
-//        createUserDTO.setEmail(this.email);
-//        createUserDTO.setPassword(this.password);
-//        createUserDTO.setUserName(this.userName);
-//        return createUserDTO;
-//
-//    }
-//    
     
     
 }

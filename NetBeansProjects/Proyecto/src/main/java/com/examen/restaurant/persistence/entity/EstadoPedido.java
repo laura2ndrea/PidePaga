@@ -28,10 +28,6 @@ public class EstadoPedido {
     private String nombre; 
 
     
-    
-  
-    
-    
     public EstadoPedido() {
     }
 

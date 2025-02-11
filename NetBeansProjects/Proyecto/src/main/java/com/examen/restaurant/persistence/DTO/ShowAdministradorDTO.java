@@ -1,47 +1,32 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.examen.restaurant.persistence.DTO;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
-
-public class ClienteDTO {
+public class ShowAdministradorDTO {
     
-
-    private Long idCleinte;
-
+    
+    private Long idAdministrador;
 
     private String name;
 
-
-    private String cedula;
-
-    
     private String userName;
-
-
+    
     private String email;
 
-  
-    private String password;
-    
-    
     private  Boolean estado; 
 
-    public ClienteDTO() {
+    public ShowAdministradorDTO() {
     }
 
-    public Long getIdCleinte() {
-        return idCleinte;
+    public Long getIdAdministrador() {
+        return idAdministrador;
     }
 
-    public void setIdCleinte(Long idCleinte) {
-        this.idCleinte = idCleinte;
+    public void setIdAdministrador(Long idAdministrador) {
+        this.idAdministrador = idAdministrador;
     }
-
-  
 
     public String getName() {
         return name;
@@ -49,14 +34,6 @@ public class ClienteDTO {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
     }
 
     public String getUserName() {
@@ -75,14 +52,6 @@ public class ClienteDTO {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public Boolean getEstado() {
         return estado;
     }
@@ -90,9 +59,6 @@ public class ClienteDTO {
     public void setEstado(Boolean estado) {
         this.estado = estado;
     }
-
-    
-    
     
     
     
