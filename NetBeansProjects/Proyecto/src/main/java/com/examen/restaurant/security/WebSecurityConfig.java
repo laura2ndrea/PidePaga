@@ -34,8 +34,8 @@ class WebSecurityConfig {
                 .authorizeHttpRequests(authz -> authz
                 //.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 .requestMatchers(HttpMethod.POST, LOGIN_URL).permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/administrador").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/administrador").permitAll() 
+                .requestMatchers(HttpMethod.POST, "/api/adminis").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/adminis").permitAll() 
                 .requestMatchers(HttpMethod.POST, "/api/cliente").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/cliente").permitAll() 
                 .anyRequest().authenticated()

@@ -50,4 +50,7 @@ public class AdministradorController {
             return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);  // 401 Unauthorized si hay algún error de login
         }
     }
+    
+    //@PutMaping("/update/email")
+
 }
