@@ -3,6 +3,7 @@ package com.examen.restaurant.web.controller;
 import com.examen.restaurant.domain.service.AdministradorServiceImpl;
 import com.examen.restaurant.persistence.DTO.AdministradorDTO;
 import com.examen.restaurant.persistence.DTO.LoginDTO;
+import com.examen.restaurant.persistence.entity.Administrador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -50,7 +51,5 @@ public class AdministradorController {
             return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);  
         }
     }
-    
-    //@PutMaping("/update/email")
 
 }

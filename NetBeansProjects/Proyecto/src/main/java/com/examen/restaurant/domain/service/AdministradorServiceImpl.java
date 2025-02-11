@@ -65,5 +65,4 @@ public class AdministradorServiceImpl implements AdministradorService {
         Administrador administrador = administradorRepository.findByEmail(email); 
         return administrador.toShowDTO(); 
     }
-    
 }
