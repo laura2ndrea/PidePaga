@@ -47,7 +47,7 @@ public class AdministradorController {
             LoginDTO loginDTO = administradorServiceImpl.loginAdministrador(email, password);
             return new ResponseEntity<>(loginDTO, HttpStatus.OK);
         } catch (RuntimeException e) {
-            return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);  // 401 Unauthorized si hay algún error de login
+            return new ResponseEntity<>(null, HttpStatus.UNAUTHORIZED);  
         }
     }
     

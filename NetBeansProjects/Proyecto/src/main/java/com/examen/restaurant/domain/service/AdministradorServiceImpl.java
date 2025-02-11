@@ -30,6 +30,7 @@ public class AdministradorServiceImpl implements AdministradorService {
     public AdministradorDTO crearAdministrador(AdministradorDTO administradorDTO) {
         Administrador administrador = administradorDTO.fromDTO(); 
         administrador.setEstado(true);
+        administrador.setPassword(passwordEncoder.encode(administradorDTO.getPassword()));
         Administrador administradorSave = administradorRepository.save(administrador); 
         return administrador.toDTO(); 
     }
