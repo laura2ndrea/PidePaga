@@ -25,9 +25,23 @@ public class PedidoServiceImpl implements PedidoService {
         this.clienteServiceImpl = clienteServiceImpl; 
     }
 
+//    private String estado;
+//    private Date fechaPedido;
+//    private Integer total;
+//    private List<DetallesPedidoDTO> listaDetallesPedidoDTO;
+//    private String nombreCliente;
+//    private String emailCliente; 
+//    private String administrradorNombre;
+//    private String administradorEmial;
+    
     @Override
     public PedidoDTO crearPedido(PedidoDTO pedidoDTO) {
-        Pedido pedido = new Pedido(); 
+        EstadoPedido estado = estadoPedidoServiceImpl.getEstadoPedidoByNombre(pedidoDTO.getEstado()); 
+        Pedido pedido = new Pedido();
+        pedido.setIdpedido(pedidoDTO.getIdpedido());
+        pedido.setIdpedido(pedidoDTO.getIdpedido());
+        pedido.setIdpedido(pedidoDTO.getIdpedido());
+        pedido.setIdpedido(pedidoDTO.getIdpedido());
         pedido.setFecha(new Date());
         Pedido pedidoSave = pedidoRepository.save(pedido); 
         return pedidoSave.toDTO();
@@ -51,6 +65,11 @@ public class PedidoServiceImpl implements PedidoService {
         return pedidos.stream()
                 .map(p -> p.toDTO())
                 .collect(Collectors.toList());
+    }
+    
+    public Pedido getPedidoById(Long idPedido) {
+        return pedidoRepository.findById(idPedido)
+                .orElseThrow(() -> new RuntimeException("Not found"));
     }
     
 }

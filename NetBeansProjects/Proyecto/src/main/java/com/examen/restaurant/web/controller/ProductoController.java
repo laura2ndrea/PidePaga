@@ -15,9 +15,7 @@ import java.util.List;
 public class ProductoController {
     
     
-    
-
-
+   
 
     private final ProductoService productoService;
 

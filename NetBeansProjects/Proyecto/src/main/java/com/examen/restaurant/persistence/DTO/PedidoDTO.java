@@ -1,5 +1,6 @@
 package com.examen.restaurant.persistence.DTO;
 
+import com.examen.restaurant.persistence.entity.Pedido;
 import java.util.Date;
 import java.util.List;
 
@@ -31,9 +32,6 @@ public class PedidoDTO {
     public void setTotal(Integer total) {
         this.total = total;
     }
-
-    
-    
     
     public void setIdpedido(Long idpedido) {
         this.idpedido = idpedido;
@@ -94,11 +92,5 @@ public class PedidoDTO {
     public void setAdministradorEmial(String administradorEmial) {
         this.administradorEmial = administradorEmial;
     }
-
-     
-    
-    
-    
-    
     
 }

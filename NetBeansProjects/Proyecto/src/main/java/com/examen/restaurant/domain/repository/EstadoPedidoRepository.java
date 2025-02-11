@@ -5,4 +5,5 @@ import com.examen.restaurant.persistence.entity.EstadoPedido;
 
 public interface EstadoPedidoRepository extends JpaRepository<EstadoPedido, Long> {
     
+    EstadoPedido findByNombre(String nombre); 
 }

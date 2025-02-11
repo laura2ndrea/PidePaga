@@ -23,6 +23,8 @@ public class EstadoPedidoServiceImpl implements EstadoPedidoService{
                 .orElseThrow(() -> new RuntimeException("Not found")); 
     }
     
-    
+    public EstadoPedido getEstadoPedidoByNombre(String nombre) {
+        return estadoPedidoRepository.findByNombre(nombre);
+    }
     
 }

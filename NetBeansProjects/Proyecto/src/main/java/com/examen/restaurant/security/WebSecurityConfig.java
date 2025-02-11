@@ -1,6 +1,7 @@
 package com.examen.restaurant.security;
 
 import static com.examen.restaurant.security.Constants.LOGIN_URL;
+import static com.examen.restaurant.security.Constants.LOGIN_URL_CLIENTE;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -34,6 +35,7 @@ class WebSecurityConfig {
                 .authorizeHttpRequests(authz -> authz
                 //.requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 .requestMatchers(HttpMethod.POST, LOGIN_URL).permitAll()
+                .requestMatchers(HttpMethod.POST, LOGIN_URL_CLIENTE).permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/admins/crear").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/admins").permitAll() 
                 .requestMatchers(HttpMethod.POST, "/api/clientes/crear").permitAll()
