@@ -36,8 +36,8 @@ class WebSecurityConfig {
                 .requestMatchers(HttpMethod.POST, LOGIN_URL).permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/admins/crear").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/admins").permitAll() 
-                .requestMatchers(HttpMethod.POST, "/api/cliente").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/cliente").permitAll() 
+                .requestMatchers(HttpMethod.POST, "/api/clientes/crear").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/clientes").permitAll() 
                 .anyRequest().authenticated()
                 )
                 .addFilterAfter(jwtAuthorizationFilter, UsernamePasswordAuthenticationFilter.class);

@@ -30,6 +30,7 @@ public class ClienteServiceImpl implements ClienteService {
     public ClienteDTO crearCliente(ClienteDTO clienteDTO) {
         Cliente cliente = Cliente.fromDTO(clienteDTO);
         cliente.setEstado(true);
+        cliente.setPassword(passwordEncoder.encode(clienteDTO.getPassword()));
         Cliente clienteSave = clienteRepository.save(cliente);
         return cliente.toDTO(); 
     }
@@ -55,7 +56,12 @@ public class ClienteServiceImpl implements ClienteService {
     @Override
     @Transactional
     public void desactivarCliente(String email) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Cliente cliente = clienteRepository.findByEmail(email);
+        if (cliente == null) {
+            throw new RuntimeException("Cliente no encontrado con el email: " + email);
+        }
+        cliente.setEstado(false); 
+        clienteRepository.save(cliente);
     }
     
     public Cliente getClienteByEmail (String emailCliente) {
