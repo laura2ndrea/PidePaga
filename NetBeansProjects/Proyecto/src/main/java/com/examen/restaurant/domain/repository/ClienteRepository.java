@@ -6,4 +6,5 @@ import com.examen.restaurant.persistence.entity.Cliente;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     
+    Cliente findByEmail(String emailCliente); 
 }
