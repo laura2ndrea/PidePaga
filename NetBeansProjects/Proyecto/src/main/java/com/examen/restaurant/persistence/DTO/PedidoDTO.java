@@ -8,6 +8,7 @@ public class PedidoDTO {
     private Long idpedido;
     private String estado;
     private Date fechaPedido;
+    private Integer total;
     private List<DetallesPedidoDTO> listaDetallesPedidoDTO;
 
     public PedidoDTO() {
@@ -17,6 +18,17 @@ public class PedidoDTO {
         return idpedido;
     }
 
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
+    
+    
+    
     public void setIdpedido(Long idpedido) {
         this.idpedido = idpedido;
     }
@@ -45,4 +57,10 @@ public class PedidoDTO {
         this.listaDetallesPedidoDTO = listaDetallesPedidoDTO;
     }
 
+     
+    
+    
+    
+    
+    
 }

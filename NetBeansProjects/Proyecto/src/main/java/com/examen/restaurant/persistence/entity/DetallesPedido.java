@@ -2,6 +2,7 @@
 package com.examen.restaurant.persistence.entity;
 
 
+import com.examen.restaurant.persistence.DTO.DetallesPedidoDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -85,8 +86,15 @@ public class DetallesPedido {
    
 
     
-    
-    
+     public DetallesPedidoDTO toDTO() {
+        DetallesPedidoDTO detallesPedidoDTO = new DetallesPedidoDTO();
+        detallesPedidoDTO.setIdDetallesPedido(this.idDEtallesPedido);
+        detallesPedidoDTO.setNombreProducto(this.producto.getNombre());
+        detallesPedidoDTO.setCantidadProducto(this.cantidad);
+        return detallesPedidoDTO;
+    }
+
+
     
     
     

@@ -1,5 +1,6 @@
 package com.examen.restaurant.persistence.entity;
 
+import com.examen.restaurant.persistence.DTO.PedidoDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -9,7 +10,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -41,6 +41,9 @@ public class Pedido {
     @ManyToOne
     @JoinColumn(name = "idestado")
     private EstadoPedido estado;
+    
+    
+    private Integer Total;
 
     public Pedido() {
     }
@@ -99,5 +102,25 @@ public class Pedido {
     public void setListaDEtallesPedido(List<DetallesPedido> ListaDEtallesPedido) {
         this.ListaDEtallesPedido = ListaDEtallesPedido;
     }
-
+    
+    
+//    public PedidoDTO toDTO (){
+//        
+//        PedidoDTO pedidoDTO = new PedidoDTO();
+//        pedidoDTO.setEstado(this.estado.getNombre());
+//        pedidoDTO.setFechaPedido(this.fecha);
+//        pedidoDTO.setIdpedido(this.idpedido);
+//        pedidoDTO.setTotal(this.Total);
+//        
+//        
+//        
+//        
+//    }
+//    
+//    
+    
+    
+    
+    
+    
 }

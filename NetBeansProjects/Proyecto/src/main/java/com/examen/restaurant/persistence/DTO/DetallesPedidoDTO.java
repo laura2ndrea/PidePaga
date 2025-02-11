@@ -2,20 +2,26 @@ package com.examen.restaurant.persistence.DTO;
 
 public class DetallesPedidoDTO {
 
-    private Long DetallesPedido;
+    private Long idDetallesPedido;
     private String nombreProducto;
     private Integer cantidadProducto;
 
     public DetallesPedidoDTO() {
     }
 
-    public Long getDetallesPedido() {
-        return DetallesPedido;
+    
+    
+    
+    public Long getIdDetallesPedido() {
+        return idDetallesPedido;
     }
 
-    public void setDetallesPedido(Long DetallesPedido) {
-        this.DetallesPedido = DetallesPedido;
+    
+    public void setIdDetallesPedido(Long idDetallesPedido) {
+        this.idDetallesPedido = idDetallesPedido;
     }
+
+   
 
     public String getNombreProducto() {
         return nombreProducto;
@@ -25,6 +31,7 @@ public class DetallesPedidoDTO {
         this.nombreProducto = nombreProducto;
     }
 
+    
     public Integer getCantidadProducto() {
         return cantidadProducto;
     }
