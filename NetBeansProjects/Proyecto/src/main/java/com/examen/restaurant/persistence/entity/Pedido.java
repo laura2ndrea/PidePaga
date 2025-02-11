@@ -102,8 +102,27 @@ public class Pedido {
     public void setListaDEtallesPedido(List<DetallesPedido> ListaDEtallesPedido) {
         this.ListaDEtallesPedido = ListaDEtallesPedido;
     }
+
+    public EstadoPedido getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoPedido estado) {
+        this.estado = estado;
+    }
+
+    public Integer getTotal() {
+        return Total;
+    }
+
+    public void setTotal(Integer Total) {
+        this.Total = Total;
+    }
     
     
+    
+    
+//    
 //    public PedidoDTO toDTO (){
 //        
 //        PedidoDTO pedidoDTO = new PedidoDTO();
@@ -111,13 +130,14 @@ public class Pedido {
 //        pedidoDTO.setFechaPedido(this.fecha);
 //        pedidoDTO.setIdpedido(this.idpedido);
 //        pedidoDTO.setTotal(this.Total);
+//        for(DetallesPedido element : this.getListaDEtallesPedido())
 //        
 //        
 //        
 //        
 //    }
-//    
-//    
+    
+    
     
     
     
