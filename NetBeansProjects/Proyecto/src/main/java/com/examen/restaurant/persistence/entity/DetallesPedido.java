@@ -84,7 +84,6 @@ public class DetallesPedido {
     }
 
    
-
     
      public DetallesPedidoDTO toDTO() {
         DetallesPedidoDTO detallesPedidoDTO = new DetallesPedidoDTO();
@@ -95,7 +94,8 @@ public class DetallesPedido {
     }
 
 
-    
+     
+
     
     
     

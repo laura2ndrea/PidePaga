@@ -1,5 +1,6 @@
 package com.examen.restaurant.persistence.entity;
 
+import com.examen.restaurant.persistence.DTO.DetallesPedidoDTO;
 import com.examen.restaurant.persistence.DTO.PedidoDTO;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -13,6 +14,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -41,8 +43,7 @@ public class Pedido {
     @ManyToOne
     @JoinColumn(name = "idestado")
     private EstadoPedido estado;
-    
-    
+
     private Integer Total;
 
     public Pedido() {
@@ -118,28 +119,28 @@ public class Pedido {
     public void setTotal(Integer Total) {
         this.Total = Total;
     }
-    
-    
-    
-    
-//    
-//    public PedidoDTO toDTO (){
-//        
-//        PedidoDTO pedidoDTO = new PedidoDTO();
-//        pedidoDTO.setEstado(this.estado.getNombre());
-//        pedidoDTO.setFechaPedido(this.fecha);
-//        pedidoDTO.setIdpedido(this.idpedido);
-//        pedidoDTO.setTotal(this.Total);
-//        for(DetallesPedido element : this.getListaDEtallesPedido())
-//        
-//        
-//        
-//        
-//    }
-    
-    
-    
-    
+
+    public PedidoDTO toDTO() {
+
+        PedidoDTO pedidoDTO = new PedidoDTO();
+        pedidoDTO.setEstado(this.estado.getNombre());
+        pedidoDTO.setFechaPedido(this.fecha);
+        pedidoDTO.setIdpedido(this.idpedido);
+        pedidoDTO.setTotal(this.Total);
+        List<DetallesPedidoDTO> listaDetalelsDTO = new ArrayList<>();
+        for (DetallesPedido element : this.getListaDEtallesPedido()) {
+            listaDetalelsDTO.add(element.toDTO());
+
+        }
+        pedidoDTO.setListaDetallesPedidoDTO(listaDetalelsDTO);
+        pedidoDTO.setAdministradorEmial(this.getAdministrador().getEmail());
+        pedidoDTO.setAdministrradorNombre(this.administrador.getName());
+        pedidoDTO.setEmailCliente(this.cliente.getEmail());
+        pedidoDTO.setNombreCliente(this.getCliente().getName());
+        return pedidoDTO;
+
+    }
+
     
     
     

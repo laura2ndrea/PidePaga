@@ -10,6 +10,12 @@ public class PedidoDTO {
     private Date fechaPedido;
     private Integer total;
     private List<DetallesPedidoDTO> listaDetallesPedidoDTO;
+    private String nombreCliente;
+    private String emailCliente; 
+    private String administrradorNombre;
+    private String administradorEmial;
+    
+    
 
     public PedidoDTO() {
     }
@@ -55,6 +61,38 @@ public class PedidoDTO {
 
     public void setListaDetallesPedidoDTO(List<DetallesPedidoDTO> listaDetallesPedidoDTO) {
         this.listaDetallesPedidoDTO = listaDetallesPedidoDTO;
+    }
+
+    public String getNombreCliente() {
+        return nombreCliente;
+    }
+
+    public void setNombreCliente(String nombreCliente) {
+        this.nombreCliente = nombreCliente;
+    }
+
+    public String getEmailCliente() {
+        return emailCliente;
+    }
+
+    public void setEmailCliente(String emailCliente) {
+        this.emailCliente = emailCliente;
+    }
+
+    public String getAdministrradorNombre() {
+        return administrradorNombre;
+    }
+
+    public void setAdministrradorNombre(String administrradorNombre) {
+        this.administrradorNombre = administrradorNombre;
+    }
+
+    public String getAdministradorEmial() {
+        return administradorEmial;
+    }
+
+    public void setAdministradorEmial(String administradorEmial) {
+        this.administradorEmial = administradorEmial;
     }
 
      
