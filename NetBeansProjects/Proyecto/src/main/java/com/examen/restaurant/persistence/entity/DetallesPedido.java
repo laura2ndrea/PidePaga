@@ -94,7 +94,15 @@ public class DetallesPedido {
     }
 
 
-     
+     public  static DetallesPedido fromDTO(DetallesPedidoDTO detallesPedidoDTO) {
+    DetallesPedido detallesPedido = new DetallesPedido();
+    detallesPedido.setIdDEtallesPedido(detallesPedidoDTO.getIdDetallesPedido());
+    detallesPedido.setProducto(new Producto()); // Asumimos que el Producto se asignará de alguna forma
+    detallesPedido.getProducto().setNombre(detallesPedidoDTO.getNombreProducto());
+    detallesPedido.setCantidad(detallesPedidoDTO.getCantidadProducto());
+    return detallesPedido;
+}
+
 
     
     

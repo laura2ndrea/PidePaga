@@ -142,6 +142,41 @@ public class Pedido {
     }
 
     
+    public Pedido fromDTO(PedidoDTO pedidoDTO) {
+    Pedido pedido = new Pedido();
+    pedido.setIdpedido(pedidoDTO.getIdpedido());
+    pedido.setFecha(pedidoDTO.getFechaPedido());
+    pedido.setTotal(pedidoDTO.getTotal());
+
+    // Asignar el estado del pedido
+    EstadoPedido estadoPedido = new EstadoPedido(); // Suponemos que creas el objeto estado de alguna forma
+    estadoPedido.setNombre(pedidoDTO.getEstado());
+    pedido.setEstado(estadoPedido);
+
+  
+    List<DetallesPedido> listaDetalles = new ArrayList<>();
+    for (DetallesPedidoDTO detallesDTO : pedidoDTO.getListaDetallesPedidoDTO()) {
+        DetallesPedido detallesPedido = DetallesPedido.fromDTO(detallesDTO);
+        listaDetalles.add(detallesPedido);
+    }
+    pedido.setListaDEtallesPedido(listaDetalles);
+
+    
+    Cliente cliente = new Cliente(); 
+    cliente.setEmail(pedidoDTO.getEmailCliente());
+    cliente.setName(pedidoDTO.getNombreCliente());
+    pedido.setCliente(cliente);
+
+  
+    Administrador administrador = new Administrador(); 
+    administrador.setEmail(pedidoDTO.getAdministradorEmial());
+    administrador.setName(pedidoDTO.getAdministrradorNombre());
+    pedido.setAdministrador(administrador);
+
+    return pedido;
+}
+
+    
     
     
 }

@@ -41,7 +41,15 @@ public class ProductoServiceImpl implements ProductoService {
     
 @Override
 public ProductoDTO crearProducto(ProductoDTO productoDTO) {
-    Producto producto = Producto.fromDTO(productoDTO);
+    
+    
+    
+    
+    Producto producto = new Producto();
+    producto.setDisponibilidad(productoDTO.getDisponibilidad());
+    producto.setNombre(productoDTO.getNombre());
+    producto.setPrecio(productoDTO.getPrecio());
+    
     Producto savedProducto = productoRepository.save(producto);
     return savedProducto.toDTO();
     

@@ -36,6 +36,12 @@ public class Producto {
 
     public Producto() {
     }
+
+    public Producto(String nombre, Boolean disponibilidad, Double precio) {
+        this.nombre = nombre;
+        this.disponibilidad = disponibilidad;
+        this.precio = precio;
+    }
     
 
     public Producto(Long idProducto, String nombre, Double precio) {
@@ -60,6 +66,8 @@ public class Producto {
         return listaDetallesPedido;
     }
 
+    
+    
     public void setListaDetallesPedido(List<DetallesPedido> listaDetallesPedido) {
         this.listaDetallesPedido = listaDetallesPedido;
     }

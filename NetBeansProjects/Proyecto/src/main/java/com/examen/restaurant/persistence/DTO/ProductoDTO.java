@@ -17,10 +17,24 @@ public class ProductoDTO {
     public ProductoDTO() {
     }
 
+    public ProductoDTO(String nombre, Boolean disponibilidad, Double precio) {
+        this.nombre = nombre;
+        this.disponibilidad = disponibilidad;
+        this.precio = precio;
+    }
+
+    
+    
+    
+    
     public Long getIdProducto() {
         return idProducto;
     }
 
+    
+    
+    
+    
     public void setIdProducto(Long idProducto) {
         this.idProducto = idProducto;
     }
