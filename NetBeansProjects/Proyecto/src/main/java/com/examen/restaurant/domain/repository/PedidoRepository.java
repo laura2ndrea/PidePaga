@@ -5,4 +5,5 @@ import com.examen.restaurant.persistence.entity.Pedido;
 
 public interface PedidoRepository extends JpaRepository<Pedido, Long>{
     
+    
 }

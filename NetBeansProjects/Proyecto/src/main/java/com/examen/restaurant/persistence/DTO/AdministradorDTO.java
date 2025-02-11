@@ -8,6 +8,6 @@ package com.examen.restaurant.persistence.DTO;
  *
  * @author camper
  */
-public class NewClass {
+public class AdministradorDTO {
     
 }
