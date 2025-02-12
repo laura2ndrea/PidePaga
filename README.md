@@ -7,7 +7,7 @@ mas info dobre EndPontis aca
 
 FRONT EDN 
 https://github.com/juanalfonsocampus/PidePaga-Front
-cdce960e02967b7cb0b9afe3aa8b329be792992c
+c4f0e265f08627379243fc77f2f75930bb225dfc
 
 
 
